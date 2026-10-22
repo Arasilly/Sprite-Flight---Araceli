@@ -1,0 +1,10 @@
+fileFormatVersion: 2
+guid: 8b0c76c86e8281c4c99d88dd8020f569
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 13804, guid: 0000000000000000e000000000000000, type: 0}

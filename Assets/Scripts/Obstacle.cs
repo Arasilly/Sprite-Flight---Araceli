@@ -24,7 +24,7 @@ public class Obstacle : MonoBehaviour
         Vector2 randomDirection = Random.insideUnitCircle;
 
 
-        
+
         rb.AddForce(randomDirection * randomSpeed);
 
         float randomTorque = Random.Range(-maxSpinSpeed, maxSpinSpeed);
@@ -35,5 +35,10 @@ public class Obstacle : MonoBehaviour
     void Update()
     {
 
+    }
+
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        Vector2 contactPoint = collision.GetContact(0).point;
     }
 }

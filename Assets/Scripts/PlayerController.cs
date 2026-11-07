@@ -26,6 +26,8 @@ public class PlayerController : MonoBehaviour
 
     public GameObject borderParent;
 
+    public GameObject obstacles;
+
     Rigidbody2D rb;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -38,6 +40,7 @@ public class PlayerController : MonoBehaviour
         restartButton.style.display = DisplayStyle.None;
 
         restartButton.clicked += ReloadScene;
+
     }
 
     // Update is called once per frame
@@ -74,6 +77,7 @@ public class PlayerController : MonoBehaviour
     void OnCollisionEnter2D(Collision2D collision)
     {
         Destroy(gameObject);
+        Destroy (obstacles);
         Instantiate(explosionEffect, transform.position, transform.rotation);
         restartButton.style.display = DisplayStyle.Flex;
         borderParent.SetActive(false);
